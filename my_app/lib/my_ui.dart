@@ -28,7 +28,7 @@ class MyUI extends StatelessWidget{
       child: Column(
         children: [
           GetBuilder<StoreController>(builder: (storecontroller){
-            return Text(storecontroller.result.toString());
+            return Text('Current Value: ${storecontroller.result.toString()}');
           }),
           TextFormField(
             controller: controller.output,
