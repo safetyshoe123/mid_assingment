@@ -4,11 +4,10 @@ import 'package:get/state_manager.dart';
 class StoreController extends GetxController{
   final output = TextEditingController();
 
-  int _result = 0;
-  int get result => _result;
+  int result = 0, total = 0;
   increment(){
-    _result = int.parse(output.text);
-    _result += _result;
+    total = int.parse(output.text);
+    result += int.parse(total.toString());
     update();
   }
 }
