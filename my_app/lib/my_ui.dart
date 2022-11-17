@@ -2,32 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'controller/controller.dart';
 
-class MyWidget extends StatefulWidget {
+class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
 
-  @override
-  State<MyWidget> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<MyWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Increment'),
       ),
-      body:  const MyUI(),
+      body:  MyUI(),
     );
   }
 }
-class MyUI extends StatefulWidget{
-  const MyUI({super.key});
 
-  @override
-  State<MyUI> createState() => _MyUIState();
-}
+class MyUI extends StatelessWidget{
+   MyUI({super.key});
 
-class _MyUIState extends State<MyUI> {
   final StoreController controller = Get.put(StoreController());
 
   @override 
